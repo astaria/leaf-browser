@@ -1,0 +1,13 @@
+=begin catalog
+
+=object button: image="~/subview_btn_back.png", action=subview-back, style=btn_back
+
+=object label: text="@{Explore}", style=label_title
+
+=object showcase: name=explore, data-script=feed_explore, \
+            loads-more=yes, more-count=30, \
+            selectable=yes, script-when-selected=open_app, \
+            script-when-reload=reset_explore, \
+            style=showcase_explore
+
+=end catalog

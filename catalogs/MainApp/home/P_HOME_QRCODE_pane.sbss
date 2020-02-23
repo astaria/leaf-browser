@@ -1,0 +1,39 @@
+import ~/themes.sbss
+
+#camera_scanner: width=1pw, height=1ph
+
+#section_mask: width=1pw, height=1ph, position=abs, gravity=center
+
+#img_scanner: scale-mode=stretch
+#blank_mask.1: color=$THEME_COLOR_CAMERA_MASK
+#blank_mask.2: color=$THEME_COLOR_CAMERA_MASK
+#blank_mask.3: color=$THEME_COLOR_CAMERA_MASK
+#blank_mask.4: color=$THEME_COLOR_CAMERA_MASK
+
+#section_guide: width=300dp, height=120dp, position=abs, gravity=top
+
+#btn_flash: width=48dp, height=48dp, position=abs, gravity=top-right, x=-10dp, y=10dp+1sbh
+
+/pane: page-background-color=$COLOR_BLACK
+/pane/mask: display=none
+/pane/mask/guide: display=none, font-family=$SANS_REGULAR, font-size=1.2, \
+        text-color=$COLOR_WHITE, text-align=center, line-break-mode=word-wrap, \
+        paragraph-spacing=0.1em, line-spacing=0.1em
+
+if $SCREEN_WIDTH > 4.7
+    #img_scanner: width=320dp, height=320dp
+    #blank_mask.1: width=1pw, height=0.2ph
+    #blank_mask.2: width=(1pw-320dp)/2, height=320dp
+    #blank_mask.3: width=(1pw-320dp)/2, height=320dp
+    #blank_mask.4: width=1pw, height=1ph-(0.2ph+320dp)
+
+    #section_guide: y=0.2ph+320dp+26dp
+else
+    #img_scanner: width=240dp, height=240dp
+    #blank_mask.1: width=1pw, height=0.2ph
+    #blank_mask.2: width=(1pw-240dp)/2, height=240dp
+    #blank_mask.3: width=(1pw-240dp)/2, height=240dp
+    #blank_mask.4: width=1pw, height=1ph-(0.2ph+240dp)
+
+    #section_guide: y=0.2ph+240dp+20dp
+end

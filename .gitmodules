@@ -1,0 +1,6 @@
+[submodule "catalogs/MainApp/Scripts/astaria-sdk"]
+	path = catalogs/MainApp/Scripts/astaria-sdk
+	url = https://github.com/astaria/astaria-sdk.git
+[submodule "catalogs/MainApp/Scripts/astaria-ads-sdk"]
+	path = catalogs/MainApp/Scripts/astaria-ads-sdk
+	url = https://github.com/astaria/astaria-ads-sdk.git

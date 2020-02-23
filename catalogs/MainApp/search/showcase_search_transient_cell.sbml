@@ -1,0 +1,6 @@
+=begin cell
+
+=object image: style=img_icon
+=object blank: style=blank_line
+
+=end cell

@@ -1,0 +1,9 @@
+=begin cell
+
+=object image: style=img_background
+
+=object cell: display-unit=S_COINS_LEAF, alternate-name=coins.leaf, style=cell_leaf
+=object blank: style=blank_divider
+=object cell: display-unit=S_COINS_LPOWER, alternate-name=coins.lpower, style=cell_lpower
+
+=end cell

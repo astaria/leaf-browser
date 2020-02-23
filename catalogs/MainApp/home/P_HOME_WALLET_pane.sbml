@@ -1,0 +1,6 @@
+=begin pane
+
+=object label: text="@{Wallet}", style=label_title
+=object showcase: name=wallet, category=C_ACTIVATED, style=showcase_wallet
+
+=end pane

@@ -1,0 +1,13 @@
+import ~/themes.sbss
+
+#img_charged: width=1pw, height=1ph, position=abs, gravity=center
+
+#label_value: font-family=$SANS_LIGHT, font-size=2.54, text-color=$THEME_COLOR_WALLET_TEXT_2, text-align=right
+#section_percent: width=22dp, height=48dp
+#label_percent: position=abs, gravity=center, y=4dp, font-family=$SANS_LIGHT, font-size=1.54, text-color=$THEME_COLOR_WALLET_TEXT_2
+
+#blank_line: color=$THEME_COLOR_WALLET_TEXT_2, width=64dp, height=1dp, margin-bottom=3dp
+
+/cell/content: display=block, position=abs, gravity=center, text-align=center
+/cell/content/percent: display=none
+/cell/content/text: font-family=$SANS_LIGHT, font-size=0.93, text-color=$THEME_COLOR_WALLET_TEXT_2, text-align=center, margin-bottom=10dp

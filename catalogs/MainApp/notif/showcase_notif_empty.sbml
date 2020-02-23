@@ -1,0 +1,12 @@
+=begin empty
+
+=begin content
+=object image: filename="empty_notif.png", style=image_empty
+
+=begin guide
+@{There is no notification.}
+=end guide
+
+=end content
+
+=end empty

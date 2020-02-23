@@ -1,0 +1,23 @@
+import ~/themes.sbss
+
+#btn_back: width=44dp, height=44dp, position=abs, gravity=left-top, y=1sbh+2dp
+
+#label_title: max-width=1pw-(44dp+6dp+10dp), height=48dp, \
+        position=abs, gravity=left-top, x=44dp+6dp, y=1sbh, \
+        font-family=@{$SANS_BOLD}, font-size=1.8, text-color=$COLOR_BLACK
+
+#showcase_explore: width=1pw, height=1ph-(1sbh+48dp), position=abs, gravity=top, y=1sbh+48dp
+
+/page: page-background-color=$THEME_COLOR_DARK_BACKGROUND
+
+if "${title}" != ""
+    #label_title: text="${title}"
+end
+
+if $SCREEN_WIDTH > 4.7
+    #showcase_explore: 
+else
+    #showcase_explore: column-count=1, cell-size="1pw-20dp, (1pw-20dp)*9/16+92dp", \
+            cell-spacing=10dp, content-margin="0 10dp", header-spacing=5dp, \
+            preload-count=5, keep-count=5
+end

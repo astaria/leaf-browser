@@ -1,0 +1,5 @@
+import ~/themes.sbss
+
+#img_background: width=1pw, height=1ph, position=abs, gravity=center, scale-mode=stretch
+
+/cell: skips-drawing=yes

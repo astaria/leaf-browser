@@ -1,0 +1,17 @@
+import ~/themes.sbss
+
+#showcase_apps: width=1pw, margin-top=5dp
+
+#cell_explore: width=1pw, height=56dp, margin="5dp 0" 
+
+if $IS_EMPTY == "yes"
+    /header: display=none
+end
+
+if $SCREEN_WIDTH > 4.7
+    #showcase_apps: height=210dp+9dp, column-count=2, cell-size="(1pw-18dp*3)/2, 210dp+9dp", \
+            cell-spacing=18dp, content-margin="0 18dp", max-cell-count=2
+else
+    #showcase_apps: height=210dp, column-count=1, cell-size="1pw, 210dp", \
+            cell-spacing=18dp, max-cell-count=1
+end

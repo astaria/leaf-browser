@@ -1,0 +1,5 @@
+=begin footer
+
+=object label: text="@{미니앱 목록을 불러오는 중입니다.}", style=label_info
+
+=end footer

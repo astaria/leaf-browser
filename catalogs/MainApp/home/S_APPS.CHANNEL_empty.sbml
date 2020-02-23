@@ -1,0 +1,11 @@
+=begin empty
+
+=begin content
+=object image: filename="empty_apps.png", style=image_empty
+
+=begin guide
+@{Your list in channel is empty.}
+=end guide
+=end content
+
+=end empty

@@ -1,0 +1,7 @@
+import themes.sbss
+
+#blank_container: width=1pw, height=1ph, position=abs, gravity=top
+
+/catalog: script-when-loaded=on_loaded, script-when-receive=on_receive, script-when-link=on_link, \
+        script-when-foreground=on_foreground, script-when-background=on_background, \
+        script-when-notify=on_notify, page-background-color=$THEME_COLOR_BACKGROUND

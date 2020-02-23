@@ -1,0 +1,20 @@
+=begin cell
+
+=object image: filename="icon_leaflet.png", style=img_leaflet
+=object image: style=img_icon
+
+=begin content
+=begin message
+@{${message}}
+=end message
+=end content
+
+=begin buttons
+=(object button: script=do_action_1, label="@{${button-1}}", style=btn_action.1)=\
+=(object button: script=do_action_2, label="@{${button-2}}", style=btn_action.2)=
+=end buttons
+
+=object timer: id=timer, time="${timeout}", autostart=no, script-when-expired=on_timeout, style=timer
+=object label: type=time, owner=timer, format="@{s초 남음}", style=label_timeout
+
+=end cell

@@ -1,0 +1,17 @@
+=begin cell
+
+=object image: filename="img_charged.png", style=img_charged
+
+=begin content
+=(object label: text="0", style=label_value)=\
+=(object section: section=percent, style=section_percent)=
+=begin percent: id=percent
+=object label: text="%", style=label_percent
+=end percent
+=object blank: style=blank_line
+=begin text
+@{charged}
+=end text
+=end content
+
+=end cell

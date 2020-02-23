@@ -1,0 +1,20 @@
+=begin cell
+
+=(object image: filename="coins/icon_${code}.png", style=img_icon)=\
+=(object section: section=name, style=section_name)=
+=begin name: id=name
+=object label: text="${name}", style=label_name
+=end name
+
+=object section: section=balance, style=section_balance
+=begin balance: id=balance
+=object label: id=label.balance, text="0.00", style=label_balance
+=object label: text="${symbol}", style=label_symbol
+=object label: id=label.balance.btc, text="0.0000", style=label_balance.currency
+=object label: text="BTC", style=label_symbol.currency
+=end balance
+=begin buttons
+=(object button: label="@{BUY}", style=btn_action)=  =(object button: label="@{SEND}", style=btn_action.light)=
+=end buttons
+
+=end cell

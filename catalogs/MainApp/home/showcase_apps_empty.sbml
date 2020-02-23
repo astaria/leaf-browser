@@ -1,0 +1,13 @@
+=begin empty
+
+=begin content
+=object image: filename="empty_apps.png", style=image_empty
+
+=begin guide
+@{Your MiniApp list is empty.}
+=end guide
+
+=object button: script=explore, label="@{Explore MiniApp}", style=btn_explore
+=end content
+
+=end empty

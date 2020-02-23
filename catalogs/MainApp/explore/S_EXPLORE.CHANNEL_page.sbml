@@ -1,0 +1,12 @@
+=begin page
+
+=object button: image="~/subview_btn_back.png", action=page-back, style=btn_back
+
+=object label: text="@{Channel}", style=label_title
+
+=object showcase: name=explore.${channel}, data-script=feed_explore, \
+            alternate-name=explore, loads-more=yes, more-count=30, \
+            selectable=yes, script-when-selected=select_app, \
+            style=showcase_explore
+
+=end page

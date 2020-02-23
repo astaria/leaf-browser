@@ -1,0 +1,9 @@
+import ~/themes.sbss
+
+#label_title: height=48dp, position=abs, gravity=left-top, x=20dp, y=1sbh, \
+        font-family=@{$SANS_BOLD}, font-size=1.8, text-color=$COLOR_BLACK
+
+#showcase_wallet: width=1pw-20dp, height=1ph-(1sbh+52dp), position=abs, gravity=top, y=1sbh+52dp, \
+        column-count=1, cell-size="1pw-20dp, 460dp"
+
+/pane: page-background-color=$THEME_COLOR_DARK_BACKGROUND

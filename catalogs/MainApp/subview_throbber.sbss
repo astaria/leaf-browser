@@ -1,0 +1,23 @@
+import themes.sbss
+
+#section_content: position=abs, gravity=center, autoresizing=flexible-margins, \
+            content-background-color=$COLOR_BLACK_DEEPEST_DIM, content-border-radius=10dp
+
+#effect: position=abs, gravity=center, y=-20dp
+#label_message: type=message, position=abs, gravity=bottom, y=-15dp, \
+            font-family=$SANS_MEDIUM, text-align=center, text-color=$COLOR_WHITE
+
+/throbber/content: display=none
+
+if $PROGRESS_MODE != "yes"
+end
+
+if $SCREEN_WIDTH > 4.7
+    #section_content: width=170dp+10dp*2, height=158dp+10dp*2
+    #effect: width=100dp-12dp, height=100dp-12dp
+    #label_message: width=170dp, height=30dp, font-size=1.3
+else
+    #section_content: width=130dp+10dp*2, height=118dp+10dp*2
+    #effect: width=70dp-12dp, height=70dp-12dp
+    #label_message: width=130dp, height=20dp, font-size=1.15
+end

@@ -1,0 +1,26 @@
+=begin pane: script-when-loaded=on_loaded
+
+=object camera: id=camera, autostart=no, autofocus=yes, continuous-autofocus=yes, focus-closely=yes, \
+            metadata-enabled=yes, metadata-object-types="qrcode,barcode", \
+            script-when-output@metadata=on_scan, script-when-resume=on_resume, \
+            style=camera_scanner
+
+=object section: section=mask, style=section_mask
+
+=begin mask: id=mask
+=(object blank: style=blank_mask.1)=
+=(object blank: style=blank_mask.2)=\
+=(object image: filename="scanner.png", style=img_scanner)=\
+=(object blank: style=blank_mask.3)=
+=(object blank: style=blank_mask.4)=
+
+=object section: section=guide, style=section_guide
+=begin guide: id=guide
+@{The QR code or barcode will be detected automatically once you have placed the code inside the square.}
+=end guide
+=end mask
+
+=object button: action=flash-on, target=owner, toggle=yes, type=flash, owner=camera, \
+            image="btn_flash_off.png", selected-image="btn_flash_on.png", style=btn_flash
+
+=end pane

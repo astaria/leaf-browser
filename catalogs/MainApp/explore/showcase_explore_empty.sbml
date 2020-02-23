@@ -1,0 +1,5 @@
+=begin empty
+
+=object effect: type=lottie, filename="loading.json", style=effect_loading
+
+=end empty

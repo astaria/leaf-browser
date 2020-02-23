@@ -1,0 +1,19 @@
+=begin popup
+
+=object section: section=content, style=section_content
+
+=begin content: id=content
+=object image: filename="codes/icon_${type}.png", style=img_icon
+=object section: section=text, style=section_text
+=begin text: id=text
+${text}
+=end text
+=begin button
+=(object button: script=share, image="btn_share.png", style=btn_share)=\
+=(object button: script=do_action, label="@{${action-message}}", style=btn_action)=
+=end button
+=begin background
+=end background
+=end content
+
+=end popup

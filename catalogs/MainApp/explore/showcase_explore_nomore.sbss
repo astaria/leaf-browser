@@ -1,0 +1,4 @@
+import ~/themes.sbss
+
+#label_info: margin-top=20dp, margin-bottom=30dp, \
+        font-family=@{$SANS_MEDIUM}, font-size=1.0, text-color=$DEFAULT_TEXT_COLOR

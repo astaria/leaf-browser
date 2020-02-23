@@ -1,0 +1,7 @@
+=begin catalog
+
+=object panes: name=home, focused-pane=P_HOME_MAIN, -has-header=yes, -has-navibar=yes, style=panes_home
+
+=object cell: id=leaflet.guide, display-unit=S_LEAFLET_INTRO, hidden=yes, style=cell_leaflet.guide
+
+=end catalog

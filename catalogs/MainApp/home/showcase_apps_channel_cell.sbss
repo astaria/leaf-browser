@@ -1,0 +1,9 @@
+import showcase_apps_cell.sbss
+
+#btn_channel: width=30dp, height=30dp, position=abs, gravity=bottom-right
+
+if $SCREEN_WIDTH > 4.7
+    #btn_channel: x=-10dp, y=-10dp
+else
+    #btn_channel: x=-8dp, y=-10dp
+end

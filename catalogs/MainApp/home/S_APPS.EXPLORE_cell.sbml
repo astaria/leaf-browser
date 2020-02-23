@@ -1,0 +1,8 @@
+=begin cell
+
+=begin content
+=(object button: script=explore, image="favicon_leaf.png", style=btn_favicon)=\
+=[underline|=(object button: script=explore, label="더 많은 미니앱을 찾아보세요.", style=btn_underline)=]=
+=end content
+
+=end cell

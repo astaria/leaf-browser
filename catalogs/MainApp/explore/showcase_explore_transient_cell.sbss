@@ -1,0 +1,6 @@
+import ~/themes.sbss
+
+#blank_background: color=$COLOR_WHITE, width=1pw, height=1ph, position=abs, gravity=center, \
+        content-border-radius=20dp
+
+/cell: skips-drawing=yes

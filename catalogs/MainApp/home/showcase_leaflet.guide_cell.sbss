@@ -1,0 +1,61 @@
+import ~/themes.sbss
+
+#img_leaflet: position=abs, gravity=left-top
+#img_icon: position=abs, gravity=left-top
+
+#btn_action: min-width=100dp, height=30dp, content-padding="0 10dp", \
+        label-font-family=@{$SANS_MEDIUM}, label-font-size=1.0, label-color=$COLOR_WHITE, \
+        content-border-color=$THEME_COLOR_MAIN, content-border-width=2dp, content-border-radius=3dp
+#btn_action.1: style=btn_action, margin-right=8dp
+#btn_action.2: style=btn_action, margin-left=8dp
+
+#label_timeout: width=120dp, height=24dp, position=abs, gravity=right-bottom, y=-(20dp+1eb), \
+        font-family=@{$SANS_MEDIUM}, font-size=1.0, text-color=$COLOR_BLACK, text-align=center, \
+        content-border-radius=24dp/2, content-background-color=$THEME_COLOR_MAIN
+
+/cell/content: display=block, position=abs, gravity=bottom, \
+        background-color=$COLOR_BLACK_DEEPEST_DIM, border-radius="20dp 20dp 0 0"
+/cell/content/message: font-family=@{$SANS_MEDIUM}, font-size=1.1, text-color=$COLOR_WHITE, text-align=left
+/cell/buttons: display=block, pack=yes, position=abs, gravity=right-bottom, y=-(20dp+1eb)
+
+if "${icon}" != ""
+    #img_icon: filename="icon_${icon}.png"
+else
+    #img_icon: display=none
+end
+
+if "${button-1-hidden}" == "yes"
+    #btn_action.1: width=0, min-width=0, height=0, hidden=yes
+end
+
+if "${button-2-hidden}" == "yes"
+    #btn_action.2: width=0, min-width=0, height=0, hidden=yes
+end
+
+if "${timeout}" != ""
+    #timer: autostart=yes
+else
+    #label_timeout: display=none
+end
+
+if "${timeout-label-hidden}" == "yes"
+    #label_timeout: display=none
+end
+
+if $SCREEN_WIDTH > 4.7
+    #img_leaflet: width=110dp, height=110dp, x=46dp
+    #img_icon: width=44dp, height=44dp, x=46dp+66dp, y=55dp
+    #label_timeout: x=-46dp
+
+    /cell/content: height=1ph-36dp
+    /cell/content/message: margin="15dp 44dp 0 44dp+110dp+20dp"
+    /cell/buttons: x=-46dp
+else
+    #img_leaflet: width=98dp, height=98dp, x=30dp
+    #img_icon: width=40dp, height=40dp, x=30dp+60dp, y=50dp
+    #label_timeout: x=-30dp
+
+    /cell/content: height=1ph-24dp
+    /cell/content/message: margin="15dp 30dp 0 30dp+98dp+10dp"
+    /cell/buttons: x=-30dp
+end

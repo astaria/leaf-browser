@@ -1,0 +1,17 @@
+=begin page
+
+=object button: image="~/subview_btn_back.png", action=page-back, style=btn_back
+
+=object label: text="@{Channel}", style=label_title
+
+=object showcase: id=showcase.apps, type=packages, channel="${channel}", alternate-name=apps, \
+            sortable=yes, sortkey=running, sortorder=descending, \
+            selectable=yes, action-when-selected=open, params-when-selected="target=owner", \
+            empty-display-unit="S_APPS.CHANNEL", \
+            style=showcase_apps
+
+=object image: filename="apps_top_cover.png", scale-mode=stretch, hidden=yes, \
+            follows-scroll=yes, owner=showcase.apps, follow-action=show, min-y=1dp, \
+            style=img_top_cover
+
+=end page

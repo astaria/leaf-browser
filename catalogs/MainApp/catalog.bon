@@ -1,0 +1,10 @@
+{
+    "title": "MainApp",
+    "version": "1.0",
+    "uses-database": "yes",
+    "database-version": "2.0",
+    "default-subview": "V_HOME",
+    "related-catalogs": [
+        "Notice"
+    ]
+}

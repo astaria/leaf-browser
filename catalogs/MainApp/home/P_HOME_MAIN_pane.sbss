@@ -1,0 +1,22 @@
+import ~/themes.sbss
+
+#label_title: height=48dp, position=abs, gravity=left-top, x=20dp, y=1sbh, \
+        font-family=@{$SANS_BOLD}, font-size=1.8, text-color=$COLOR_BLACK
+
+#btn_tool: width=38dp, height=48dp, position=abs, gravity=right-top, y=1sbh
+#btn_notif: style=btn_tool, x=-5dp
+#btn_search: style=btn_tool, x=-(38dp+5dp)
+
+#showcase_apps: width=1pw, height=1ph-(1sbh+52dp), position=abs, gravity=top, y=1sbh+52dp, \
+        footer-spacing=18dp, footer-height=1eb, keeps-offscreen-cells=yes
+#img_top_cover: width=1pw, height=10dp, position=abs, gravity=top, y=1sbh+52dp
+
+/pane: script-when-loaded=on_loaded, page-background-color=$THEME_COLOR_DARK_BACKGROUND
+
+if $SCREEN_WIDTH > 4.7
+    #showcase_apps: column-count=2, cell-size="(1pw-18dp*3)/2, 210dp+9dp", \
+            cell-spacing=18dp, content-margin="0 18dp", first-cell=3, preload-count=10
+else
+    #showcase_apps: column-count=1, cell-size="1pw, 210dp", \
+            cell-spacing=18dp, first-cell=2, preload-count=5
+end

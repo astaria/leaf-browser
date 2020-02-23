@@ -1,0 +1,13 @@
+import showcase_coins_cell.sbss
+
+#section_balance: width=1pw-10dp, height=86dp, margin="15dp 0 15dp 0"
+
+#label_balance: width=1pw-(38dp+6dp), height=44dp, position=abs, gravity=top-right, x=-(38dp+6dp)
+#label_symbol: width=38dp, height=22dp, position=abs, gravity=top-right, y=18dp
+
+#label_balance.currency: width=1pw-(28dp+2dp), height=24dp, position=abs, gravity=top-right, x=-(28dp+2dp), y=50dp
+#label_symbol.currency: width=28dp, height=18dp, position=abs, gravity=top-right, y=58dp
+
+/cell/name: display=none
+/cell/balance: display=none
+/cell/buttons: text-align=center

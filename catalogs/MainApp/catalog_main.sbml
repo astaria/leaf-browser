@@ -1,0 +1,5 @@
+=begin catalog
+
+=object blank: id=container, autoresizing=flexible-size, style=blank_container
+
+=end catalog

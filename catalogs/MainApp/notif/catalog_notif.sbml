@@ -1,0 +1,9 @@
+=begin catalog
+
+=object button: image="~/subview_btn_back.png", action=subview-back, style=btn_back
+
+=object label: text="@{Notifications}", style=label_title
+
+=object showcase: name=notif, style=showcase_notif
+
+=end catalog

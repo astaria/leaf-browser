@@ -1,0 +1,12 @@
+=begin catalog
+
+=object button: image="~/subview_btn_back.png", action=subview-back, style=btn_back
+
+=object label: text="@{Books}", style=label_title
+
+=object showcase: alternate-name=books, type=bookcase, \
+            selectable=yes, script-when-selected=open_book, \
+            script-when-reload=reset_explore, \
+            style=showcase_books
+
+=end catalog

@@ -1,0 +1,27 @@
+import ~/themes.sbss
+
+#img_icon: width=26dp, height=24dp
+#section_name: width=1pw-(26dp+4dp), height=24dp, margin-left=4dp
+#label_name: position=abs, gravity=left, \
+        font-family=$SANS_MEDIUM, font-size=1.54, text-color=$COLOR_BLACK, text-align=left
+
+#label_balance: font-family=$SANS_SEMIBOLD, font-size=3.5, \
+        text-color=$THEME_COLOR_WALLET_TEXT_1, text-align=right
+#label_symbol: font-family=$SANS_BOLD, font-size=0.93, text-color=$COLOR_WHITE, text-align=center, \
+        content-background-color=$THEME_COLOR_BUTTON_HIGHLIGHT, content-border-radius=3dp
+
+#label_balance.currency: font-family=$SANS_REGULAR, font-size=1.85, \
+        text-color=$THEME_COLOR_WALLET_TEXT_1, text-align=right
+#label_symbol.currency: font-family=$SANS_REGULAR, font-size=0.93, \
+        text-color=$THEME_COLOR_WALLET_TEXT_1, text-align=center
+
+#label_balance.small:font-family=$SANS_MEDIUM, font-size=3.0, \
+        text-color=$THEME_COLOR_WALLET_TEXT_1, text-align=right
+#label_symbol.small: font-family=$SANS_BOLD, font-size=0.82, text-color=$COLOR_WHITE, text-align=center, \
+        content-background-color=$THEME_COLOR_BUTTON_HIGHLIGHT, content-border-radius=3dp
+
+#btn_action: width=(1pw-14dp)/2, height=44dp, \
+        label-font-family=@{$SANS_MEDIUM}, label-font-size=1.23, label-color=$THEME_COLOR_BUTTON_TEXT, \
+        content-background-color=$THEME_COLOR_BUTTON_HIGHLIGHT, content-border-radius=5dp
+#btn_action.light: style=btn_action, content-background-color=$COLOR_TRANSPARENT, \
+        content-border-width=1dp, content-border-color=$THEME_COLOR_BUTTON_HIGHLIGHT

@@ -1,0 +1,7 @@
+import ~/themes.sbss
+
+#btn_favicon: width=24dp, height=24dp, margin-right=4dp
+#underline: text-color=$THEME_COLOR_UNDERLINE, text-decoration=underline-1dp
+#btn_underline: label-font-family=@{$SANS_LIGHT}, label-font-size=1.2, label-color=$THEME_COLOR_LIGHT_TEXT
+
+/cell/content: display=block, position=abs, gravity=center, y=-3dp, text-align=center

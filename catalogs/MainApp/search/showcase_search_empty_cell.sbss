@@ -1,0 +1,5 @@
+import ~/themes.sbss
+
+#blank_line: color=$COLOR_LIGHT_GRAY, width=1pw, height=1dp, position=abs, gravity=bottom
+
+/cell: skips-drawing=yes

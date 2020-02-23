@@ -1,0 +1,22 @@
+=begin cell
+
+=object image: filename="app_background.png", style=img_background
+=object section: section=default, style=section_default
+=begin default: id=default
+=object blank: style=blank_screenshot
+=object image: type=app, subtype=screenshot, app="${app}", reuse-id="screenshot.${app}", style=img_screenshot
+=begin description
+=begin title
+${title} =(object image: filename="icon_pinning.png", style=img_pinning)=
+=end title
+${description}
+=end description
+=end default
+
+=object image: type=app, subtype=banner, app="${app}", reuse-id="banner.${app}", style=img_banner
+=object widget: app="${app}", reuse-id="widget.${app}", style=widget
+
+=object label: text="${title}", reuse-id="title.${app}", style=label_title
+=object button: script=show_menu, image="btn_menu.png", style=btn_menu
+
+=end cell

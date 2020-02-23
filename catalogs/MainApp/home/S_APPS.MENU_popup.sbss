@@ -1,0 +1,37 @@
+import ~/themes.sbss
+
+#btn_menu: width=240dp, height=40dp, \
+        label-font-family=@{$SANS_REGULAR}, label-font-size=1.2, label-align=left, \
+        label-color=$COLOR_DARK_GRAY, highlight-label-color=$COLOR_GRAY, disable-label-color=$COLOR_LIGHT_GRAY
+
+#btn_remove: style=btn_menu, label="@{Remove}", script=remove
+#btn_pin: style=btn_menu, label="@{Pin to the top}", script=pin
+#btn_channel: style=btn_menu, label="@{Open list in channel}", script=channel
+#btn_share: style=btn_menu, label="@{Share}", script=share
+
+/popup: page-background-color=$COLOR_BLACK_DIM, action-when-touched=popup-close
+/popup/menu: display=block, width=0.8pw, padding="20dp 30dp", \
+        position=abs, gravity=center, background-color=$COLOR_WHITE, border-radius=10dp
+/popup/menu/title: margin-bottom=10dp, \
+        font-family=@{$SANS_BOLD}, font-size=1.45, text-align=left, text-color=$COLOR_BLACK, \
+        line-break-mode=word-wrap
+
+if "${channel}" == ""
+    #menu.channel: display=none
+else
+    #btn_remove: label="@{Remove channel}"
+end
+
+if "${app}" == ""
+    #menu.app: display=none 
+end
+
+if "${pinning}" == "yes"
+    #btn_pin: label="@{Unpin the top}", script=unpin
+end
+
+if $SCREEN_WIDTH > 4.7
+    /popup/menu: width=400dp
+else
+    /popup/menu: width=0.8pw
+end

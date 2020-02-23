@@ -1,0 +1,7 @@
+import ~/themes.sbss
+
+#effect_loading: width=100dp, height=100dp, position=abs, gravity=center
+
+if $LOADING != "yes"
+    #effect_loading: display=none
+end

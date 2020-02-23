@@ -1,0 +1,8 @@
+=begin cell
+
+=object image: type=app, subtype=icon, app="${app}", style=img_icon
+=object label: text="${title}", style=label_title
+
+=object blank: style=blank_line
+
+=end cell

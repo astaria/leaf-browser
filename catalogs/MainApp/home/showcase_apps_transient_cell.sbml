@@ -1,0 +1,5 @@
+=begin transient
+
+=object image: filename="app_background.png", style=img_background
+
+=end transient

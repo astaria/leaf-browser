@@ -1,0 +1,22 @@
+import ~/themes.sbss
+
+#img_background: filename="coins_bg_white.png", scale-mode=stretch, \
+        width=1pw, height=1ph, position=abs, gravity=center
+#blank_divider: color=$THEME_COLOR_WALLET_LINE, \
+        width=1pw-70dp, height=2px, max-height=1dp, margin-top=30dp, margin-bottom=30dp
+
+#cell_leaf: width=1pw-54dp, height=190dp, margin-top=25dp
+#cell_lpower: width=1pw-54dp, height=170dp
+
+#section_guide: width=1pw-10dp, height=1ph-10dp, position=abs, gravity=center, \
+        content-border-radius=8dp, content-background-color=$COLOR_BLACK_DEEPEST_DIM
+
+#effect_present: width=300dp, height=240dp
+#btn_introduce: height=40dp, content-padding="0 10dp", margin-top=30dp, \
+        label-font-family=@{$SANS_MEDIUM}, label-font-size=1.2, label-color=$COLOR_WHITE, \
+        content-border-color=$THEME_COLOR_MAIN, content-border-width=2dp, content-border-radius=3dp
+
+/cell/guide: display=none
+/cell/guide/content: display=block, position=abs, gravity=center, y=-30dp
+/cell/guide/content/message: display=block, width=240dp, margin-top=15dp, \
+        font-family=@{$SANS_REGULAR}, font-size=1.4, text-align=center, text-color=$COLOR_WHITE

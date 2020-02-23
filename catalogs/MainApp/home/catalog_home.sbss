@@ -1,0 +1,17 @@
+import ~/themes.sbss
+
+#panes_home: width=1pw, height=1ph, position=abs, gravity=center
+
+#cell_leaflet.guide: width=1pw, max-width=1ph, position=abs, gravity=bottom
+
+/catalog: data-binding=leaflet-status, script-when-data-changed=on_change_data
+
+if $SCREEN_WIDTH > 4.7
+    if $ORIENTATION == "portrait"
+        #cell_leaflet.guide: height=144dp+1eb
+    else
+        #cell_leaflet.guide: height=134dp+1eb
+    end
+else
+    #cell_leaflet.guide: height=140dp+1eb
+end

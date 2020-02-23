@@ -1,0 +1,19 @@
+=begin cell
+
+=(object image: filename="coins/icon_${code}.png", style=img_icon)=\
+=(object section: section=name, style=section_name)=
+=begin name: id=name
+=object label: text="${name}", style=label_name
+=end name
+
+=object section: section=balance, style=section_balance
+=begin balance: id=balance
+=object label: id=label.balance.small, text="0.00", style=label_balance
+=object label: text="${symbol}", style=label_symbol
+=end balance
+=begin buttons
+=(object button: label="@{CHARGE}", style=btn_action)=
+=end buttons
+=object cell: display-unit="${id}", alternate-name=coins.${code}.charged, style=cell_charged
+
+=end cell

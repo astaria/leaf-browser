@@ -1,0 +1,10 @@
+=begin throbber
+
+=object section: section=content, style=section_content
+
+=begin content: id=content
+=object effect: type=lottie, filename="throbber.json", style=effect
+=object label: style=label_message
+=end content
+
+=end throbber

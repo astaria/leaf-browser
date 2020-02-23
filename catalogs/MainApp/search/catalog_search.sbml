@@ -1,0 +1,22 @@
+=begin catalog
+
+=object button: image="~/subview_btn_back.png", action=subview-back, style=btn_back
+
+=object label: text="@{Search}", style=label_title
+
+=object showcase: id=showcase.search, type=packages, alternate-name=search, unfolds-channel=yes, \
+            selectable=yes, action-when-selected=app, style=showcase_search
+
+=object section: section=searchbar, style=section_searchbar
+
+=begin searchbar: id=searchbar
+=object blank: style=blank_searchbar
+=object textfield: id=keyword, action=search, keyword=#{keyword}, \
+            search-keys="title,description", target=object, object=showcase.search, \
+            action-when-clear=search-cancel, params-when-clear="target=object,object=showcase.search", \
+            style=textfield_keyword
+=object image: filename="btn_search.png", style=img_search
+=object button: image="btn_clear.png", action=clear, target=object, object=keyword, style=btn_clear
+=end searchbar
+
+=end catalog
