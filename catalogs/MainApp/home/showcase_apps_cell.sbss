@@ -4,9 +4,13 @@ import ~/themes.sbss
 #section_default: width=1pw, height=1ph, position=abs, gravity=center
 
 #screenshot: width=(1ph-18dp*2)*2/3, height=1ph-18dp*2, position=abs, gravity=left
-#blank_screenshot: style=screenshot, color=$COLOR_DARK_WHITE_DIM, content-border-radius=5dp
-#img_screenshot: style=screenshot, scale-mode=fill, scales-in-background=no, \
-        content-gravity=top, content-border-radius=5dp
+#img_screenshot: style=screenshot, width=((1ph-18dp*2)*2/3)-6dp, height=(1ph-18dp*2)-6dp, \
+        scale-mode=fill, content-gravity=top, content-border-radius=5dp
+#img_screenshot.mask: style=screenshot, scale-mode=stretch
+
+#icon: width=0.34ph, height=0.34ph, position=abs, gravity=left-top, y=10dp
+#img_icon: style=icon, default-color=$COLOR_WHITE, scale-mode=fill, content-border-radius=8dp
+#img_icon.mask: style=icon, scale-mode=stretch
 
 #img_banner: height=1ph-(15dp+30dp+5dp), position=abs, gravity=top-right, scale-mode=fill, \
         default-color=$COLOR_DARK_WHITE
@@ -31,8 +35,10 @@ if $HAS_OWN_WIDGET != "yes" && $HAS_OWN_BANNER != "yes"
 end
 
 if $HAS_OWN_WIDGET == "yes"
-    #blank_screenshot: display=none
     #img_screenshot: display=none
+    #img_screenshot.mask: display=none
+    #img_icon: display=none
+    #img_icon.mask: display=none
     #img_banner: display=none
     #btn_menu: offset-y=-8dp
     if $FULLSCREEN_WIDGET == "yes"
@@ -43,12 +49,20 @@ else
 end
 
 if $HAS_OWN_BANNER == "yes"
-    #blank_screenshot: display=none
     #img_screenshot: display=none
+    #img_screenshot.mask: display=none
+    #img_icon: display=none
+    #img_icon.mask: display=none
     #section_default: display=none
     #btn_menu: offset-y=-8dp
 else
     #img_banner: display=none
+end
+
+if $HAS_OWN_SCREENSHOT == "yes"
+    #img_screenshot.mask: display=none
+    #img_icon: display=none
+    #img_icon.mask: display=none
 end
 
 if $PINNING != "yes"
@@ -56,8 +70,10 @@ if $PINNING != "yes"
 end
 
 if $SCREEN_WIDTH > 4.7
-    #blank_screenshot: x=18dp
-    #img_screenshot: x=18dp
+    #img_screenshot: x=18dp+3dp
+    #img_screenshot.mask: x=18dp
+    #img_icon: x=10dp
+    #img_icon.mask: x=10dp
     #img_banner: width=1pw
     #widget: width=1pw
     #label_title: width=1pw-(21dp+50dp), x=21dp, y=-10dp
@@ -69,8 +85,10 @@ if $SCREEN_WIDTH > 4.7
         /cell/default/description: margin-left=(1ph-18dp*2)*2/3+18dp+32dp
     end
 else
-    #blank_screenshot: x=18dp+18dp
-    #img_screenshot: x=18dp+18dp
+    #img_screenshot: x=18dp+18dp+3dp
+    #img_screenshot.mask: x=18dp+18dp
+    #img_icon: x=10dp+18dp
+    #img_icon.mask: x=10dp+18dp
     #img_banner: width=1pw-18dp
     #widget: width=1pw-18dp
     #label_title: width=1pw-(30dp+50dp), x=30dp, y=-10dp

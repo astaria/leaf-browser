@@ -3,8 +3,10 @@
 =object image: filename="app_background.png", style=img_background
 =object section: section=default, style=section_default
 =begin default: id=default
-=object blank: style=blank_screenshot
 =object image: type=app, subtype=screenshot, app="${app}", reuse-id="screenshot.${app}", style=img_screenshot
+=object image: filename="app_screenshot_mask.png", style=img_screenshot.mask
+=object image: type=app, subtype=icon, app="${app}", reuse-id="icon.${app}", style=img_icon
+=object image: filename="app_icon_mask.png", style=img_icon.mask
 =begin description
 =begin title
 ${title} =(object image: filename="icon_pinning.png", style=img_pinning)=

@@ -1,5 +1,5 @@
 =begin catalog
 
-=object blank: id=container, autoresizing=flexible-size, style=blank_container
+=object blank: id=container, style=blank_container
 
 =end catalog

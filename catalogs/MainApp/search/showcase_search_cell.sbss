@@ -1,7 +1,9 @@
 import ~/themes.sbss
 
-#img_icon: width=44dp, height=44dp, position=abs, gravity=left, x=5dp, \
-        default-color=$COLOR_DARK_WHITE_DIM, scale-mode=fill, content-border-radius=5dp
+#icon: width=44dp, height=44dp, position=abs, gravity=left, x=5dp
+#img_icon: style=icon, scale-mode=fill, content-border-radius=5dp
+#img_icon.mask: style=icon, scale-mode=stretch
+
 #label_title: width=1pw-(44dp+15dp), height=44dp, position=abs, gravity=left, x=44dp+15dp, \
         font-family=@{$SANS_MEDIUM}, font-size=1.0, fits-when-loading=yes, \
         number-of-lines=2, line-break-mode=tail-truncation

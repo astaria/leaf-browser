@@ -1,6 +1,7 @@
 =begin cell
 
 =object image: type=app, subtype=icon, app="${app}", style=img_icon
+=object image: filename="app_icon_mask.png", style=img_icon.mask
 =object label: text="${title}", style=label_title
 
 =object blank: style=blank_line
