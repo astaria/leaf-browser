@@ -14,9 +14,9 @@ import ~/themes.sbss
 /pane: script-when-loaded=on_loaded, page-background-color=$THEME_COLOR_DARK_BACKGROUND
 
 if $SCREEN_WIDTH > 4.7
-    #showcase_apps: column-count=2, cell-size="(1pw-18dp*3)/2, 210dp+9dp", \
+    #showcase_apps: column-count=2, cell-size="(1pw-18dp*3)/2, 180dp+9dp", \
             cell-spacing=18dp, content-margin="0 18dp", first-cell=3, preload-count=10
 else
-    #showcase_apps: column-count=1, cell-size="1pw, 210dp", \
+    #showcase_apps: column-count=1, cell-size="1pw, 180dp", \
             cell-spacing=18dp, first-cell=2, preload-count=5
 end

@@ -9,9 +9,9 @@ if $IS_EMPTY == "yes"
 end
 
 if $SCREEN_WIDTH > 4.7
-    #showcase_apps: height=210dp+9dp, column-count=2, cell-size="(1pw-18dp*3)/2, 210dp+9dp", \
+    #showcase_apps: height=180dp+9dp, column-count=2, cell-size="(1pw-18dp*3)/2, 180dp+9dp", \
             cell-spacing=18dp, content-margin="0 18dp", max-cell-count=2
 else
-    #showcase_apps: height=210dp, column-count=1, cell-size="1pw, 210dp", \
+    #showcase_apps: height=180dp, column-count=1, cell-size="1pw, 180dp", \
             cell-spacing=18dp, max-cell-count=1
 end

@@ -3,18 +3,18 @@ import ~/themes.sbss
 #img_background: width=1pw, height=1ph, position=abs, gravity=center, scale-mode=stretch
 #section_default: width=1pw, height=1ph, position=abs, gravity=center
 
-#screenshot: width=(1ph-18dp*2)*2/3, height=1ph-18dp*2, position=abs, gravity=left
-#img_screenshot: style=screenshot, width=((1ph-18dp*2)*2/3)-6dp, height=(1ph-18dp*2)-6dp, \
+#screenshot: width=(1ph-14dp*2)*2/3, height=1ph-14dp*2, position=abs, gravity=left
+#img_screenshot: style=screenshot, width=((1ph-14dp*2)*2/3)-6dp, height=(1ph-14dp*2)-6dp, \
         scale-mode=fill, content-gravity=top, content-border-radius=5dp
 #img_screenshot.mask: style=screenshot, scale-mode=stretch
 
-#icon: width=0.34ph, height=0.34ph, position=abs, gravity=left-top, y=10dp
-#img_icon: style=icon, default-color=$COLOR_WHITE, scale-mode=fill, content-border-radius=8dp
+#icon: width=40dp, height=40dp, position=abs, gravity=left-top, y=10dp
+#img_icon: style=icon, default-color=$COLOR_WHITE, scale-mode=fill, content-border-radius=5dp
 #img_icon.mask: style=icon, scale-mode=stretch
 
-#img_banner: height=1ph-(15dp+30dp+5dp), position=abs, gravity=top-right, scale-mode=fill, \
+#img_banner: height=1ph-(5dp+40dp+5dp), position=abs, gravity=top-right, scale-mode=fill, \
         default-color=$COLOR_DARK_WHITE
-#widget: height=1ph-(15dp+30dp+5dp), position=abs, gravity=top-right, \
+#widget: height=1ph-(5dp+40dp+5dp), position=abs, gravity=top-right, \
         content-background-color=$COLOR_DARK_WHITE
 
 #label_title: height=30dp, position=abs, gravity=bottom-left, \
@@ -25,10 +25,11 @@ import ~/themes.sbss
 
 /cell: skips-drawing=yes
 /cell/default: display=none
-/cell/default/description: margin="16dp 20dp 20dp 0", \
+/cell/default/description: margin="15dp 20dp 20dp 0", \
         font-family=@{$SANS_LIGHT}, font-size=1.0, text-color=$THEME_COLOR_TEXT
 /cell/default/description/title: margin="0 40dp 10dp 0", \
-        font-family=@{$SANS_MEDIUM}, font-size=1.4, text-align=left, line-break-mode=word-wrap
+        font-family=@{$SANS_MEDIUM}, font-size=1.4, text-align=left, \
+        line-spacing=-4dp, line-break-mode=word-wrap
 
 if $HAS_OWN_WIDGET != "yes" && $HAS_OWN_BANNER != "yes"
     #label_title: display=none
@@ -40,7 +41,7 @@ if $HAS_OWN_WIDGET == "yes"
     #img_icon: display=none
     #img_icon.mask: display=none
     #img_banner: display=none
-    #btn_menu: offset-y=-8dp
+    #btn_menu: offset-y=-6dp
     if $FULLSCREEN_WIDGET == "yes"
         #widget: height=1ph
     end
@@ -54,13 +55,15 @@ if $HAS_OWN_BANNER == "yes"
     #img_icon: display=none
     #img_icon.mask: display=none
     #section_default: display=none
-    #btn_menu: offset-y=-8dp
+    #btn_menu: offset-y=-6dp
+    if $FULLSCREEN_BANNER == "yes"
+        #img_banner: height=1ph
+    end
 else
     #img_banner: display=none
 end
 
 if $HAS_OWN_SCREENSHOT == "yes"
-    #img_screenshot.mask: display=none
     #img_icon: display=none
     #img_icon.mask: display=none
 end
@@ -70,29 +73,29 @@ if $PINNING != "yes"
 end
 
 if $SCREEN_WIDTH > 4.7
-    #img_screenshot: x=18dp+3dp
-    #img_screenshot.mask: x=18dp
+    #img_screenshot: x=14dp+3dp
+    #img_screenshot.mask: x=14dp
     #img_icon: x=10dp
     #img_icon.mask: x=10dp
     #img_banner: width=1pw
     #widget: width=1pw
     #label_title: width=1pw-(21dp+50dp), x=21dp, y=-10dp
-    #btn_menu: x=-10dp, y=15dp
+    #btn_menu: x=-10dp, y=13dp
 
     if $ORIENTATION == "portrait"
-        /cell/default/description: margin-left=(1ph-18dp*2)*2/3+18dp+17dp
+        /cell/default/description: margin-left=(1ph-14dp*2)*2/3+14dp+12dp
     else
-        /cell/default/description: margin-left=(1ph-18dp*2)*2/3+18dp+32dp
+        /cell/default/description: margin-left=(1ph-14dp*2)*2/3+14dp+14dp
     end
 else
-    #img_screenshot: x=18dp+18dp+3dp
-    #img_screenshot.mask: x=18dp+18dp
-    #img_icon: x=10dp+18dp
-    #img_icon.mask: x=10dp+18dp
+    #img_screenshot: x=18dp+14dp+3dp
+    #img_screenshot.mask: x=18dp+14dp
+    #img_icon: x=18dp+10dp
+    #img_icon.mask: x=18dp+10dp
     #img_banner: width=1pw-18dp
     #widget: width=1pw-18dp
     #label_title: width=1pw-(30dp+50dp), x=30dp, y=-10dp
-    #btn_menu: x=-8dp, y=15dp
+    #btn_menu: x=-8dp, y=13dp
 
-    /cell/default/description: margin-left=(1ph-18dp*2)*2/3+(18dp+18dp)+14dp
+    /cell/default/description: margin-left=(1ph-14dp*2)*2/3+(18dp+14dp)+14dp
 end
