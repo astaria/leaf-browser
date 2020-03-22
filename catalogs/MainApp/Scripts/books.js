@@ -1,6 +1,6 @@
 Books = (function() {
-    return {};
-})();
+    return {}
+})()
 
 Books.open_book = function(book_id, url) {
     controller.action("open", { 
@@ -9,7 +9,7 @@ Books.open_book = function(book_id, url) {
         "dir-path":"books",
         "format":"bxp",
         "url":url 
-    });
+    })
 }
 
-__MODULE__ = Books;
+__MODULE__ = Books

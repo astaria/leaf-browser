@@ -1,5 +1,5 @@
 YouTubeApi = (function() {
-    return {};
-})();
+    return {}
+})()
 
-__MODULE__ = YouTubeApi;
+__MODULE__ = YouTubeApi

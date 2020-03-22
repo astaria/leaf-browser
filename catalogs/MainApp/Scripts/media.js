@@ -1,5 +1,5 @@
 Media = (function() {
-    return {};
-})();
+    return {}
+})()
 
-__MODULE__ = Media;
+__MODULE__ = Media

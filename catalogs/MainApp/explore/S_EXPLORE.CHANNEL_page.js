@@ -1,18 +1,18 @@
 function feed_explore(keyword, location, length, sortkey, sortorder, handler) {
-    var url = "https://leafapp.io/api/v1/channel/" + $data["channel"];
+    var url = "https://leafapp.io/api/v1/channel/" + $data["channel"]
 
     if (location == 0) {
         fetch(url, null, true).then(function(response) {
             if (response.ok) {
                 response.json().then(function(data) {
-                    handler(data);
-                });
+                    handler(data)
+                })
             } else {
-                handler([]);
+                handler([])
             }
-        });	
+        })	
     } else {
-        handler([]);
+        handler([])
     }
 }
 
@@ -21,5 +21,5 @@ function select_app(data) {
 		"app":data["app"],
 		"version":data["version"],
 		"url":data["file"]
-	});
+	})
 }
