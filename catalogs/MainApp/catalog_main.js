@@ -95,6 +95,7 @@ function on_connect(params) {
 }
 
 function on_notify(params) {
+    
 }
 
 function open_app(params) {

@@ -2,11 +2,13 @@ Apps = (function() {
     return {}
 })()
 
-Apps.open_app = function(app_id, url, version) {
+Apps.open_app = function(app_id, url, params) {
     controller.action("app", { 
         "app":app_id, 
         "url":Apps.__get_app_url(url),
-        "version":version || "0.0"
+        "version":params["version"] || "0.0",
+        "open-url":params["open-url"] || "",
+        "app-params":params["app-params"] || ""
     })
 }
 

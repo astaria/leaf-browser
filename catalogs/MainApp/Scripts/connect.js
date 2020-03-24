@@ -59,11 +59,11 @@ Connect.__on_authorize_app = function(params) {
 }
 
 Connect.__invoke_app = function(params) {
-    Connect.apps.open_app(params["app"], params["url"], params["version"])
+    Connect.apps.open_app(params["app"], params["url"], params)
 }
 
 Connect.__invoke_book = function(params) {
-    Connect.books.open_book(params["book"], params["url"])
+    Connect.books.open_book(params["book"], params["url"], params)
 }
 
 Connect.__is_free_method = function(method) {

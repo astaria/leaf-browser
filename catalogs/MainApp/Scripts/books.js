@@ -2,7 +2,7 @@ Books = (function() {
     return {}
 })()
 
-Books.open_book = function(book_id, url) {
+Books.open_book = function(book_id, url, params) {
     controller.action("open", { 
         "filename":book_id,
         "root-path":"catalog@data",

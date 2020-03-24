@@ -1,5 +1,5 @@
-function open_book(data) {
+function open_book(params) {
     controller.action("open", {
-        "item":data["item"]
+        "item":params["item"]
     })
 }

@@ -36,11 +36,11 @@ function reset_explore() {
     }
 }
 
-function open_app(data) {
+function open_app(params) {
     controller.action("app", {
-        "app":data["app"],
-        "version":data["version"],
-        "url":data["file"]
+        "app":params["app"],
+        "version":params["version"],
+        "url":params["file"]
     })
 }
 
