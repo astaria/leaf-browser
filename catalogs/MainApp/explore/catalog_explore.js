@@ -1,5 +1,6 @@
 function feed_explore(keyword, location, length, sortkey, sortorder, handler) {
-    var url = "https://leafapp.io/api/v1/store"
+    //var url = "https://leafapp.io/api/v1/store"
+    var url = "https://jampod-156205.appspot.com/api/v1/store"
     var query = "location=" + location + "&" + "length=" + length
     var cached = __cached_data()
 

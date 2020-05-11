@@ -1,5 +1,6 @@
 function feed_explore(keyword, location, length, sortkey, sortorder, handler) {
-    var url = "https://leafapp.io/api/v1/channel/" + $data["channel"]
+//    var url = "https://leafapp.io/api/v1/channel/" + $data["channel"]
+    var url = "https://jampod-156205.appspot.com/api/v1/channel/" + $data["channel"]
 
     if (location == 0) {
         fetch(url, null, true).then(function(response) {
