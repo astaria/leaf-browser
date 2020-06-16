@@ -4,8 +4,6 @@ import ~/themes.sbss
 
 #cell_leaflet.guide: width=1pw, max-width=1ph, position=abs, gravity=bottom
 
-/catalog: data-binding=leaflet-status, script-when-data-changed=on_change_data
-
 if $SCREEN_WIDTH > 4.7
     if $ORIENTATION == "portrait"
         #cell_leaflet.guide: height=144dp+1eb

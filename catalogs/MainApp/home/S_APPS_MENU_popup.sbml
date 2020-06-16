@@ -1,0 +1,27 @@
+=begin popup
+
+=begin menu
+
+=begin title
+${title}
+=end title
+
+=begin button: style=menu.channel
+=(object button: label="@{Open list in channel}", script=channel, style=btn_menu)=
+=end button
+=begin button
+=(object button: label="@{Remove}", script=remove, style=btn_menu, style=btn_remove)=
+=end button
+=begin button
+=(object button: label="@{Pin to the top}", script=pin, style=btn_menu, style=btn_pin)=
+=end button
+=begin button: style=menu.app
+=(object button: label="@{Share}", script=share, style=btn_menu)=
+=end button
+
+=begin contacts
+=end contacts
+
+=end menu
+
+=end popup

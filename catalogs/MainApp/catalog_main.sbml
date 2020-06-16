@@ -1,4 +1,6 @@
-=begin catalog
+=begin catalog: script-when-loaded=on_loaded, script-when-receive=on_receive, script-when-link=on_link, \
+                script-when-foreground=on_foreground, script-when-background=on_background, \
+                script-when-notify=on_notify, script-when-open@app=on_open_app
 
 =object blank: id=container, style=blank_container
 

@@ -4,7 +4,7 @@
 =object image: image-url="${banner-image}", style=img_banner
 
 =object label: text="${title}", style=label_title
-=object label: text="${adcopy}", style=label_adcopy
+=object label: text="${ad-copy}", style=label_adcopy
 =object label: type=decimal, text="${use-count}", format="@{#_명 사용 중입니다.}", style=label_using
 
 =object button: script=explore_channel, label="@{이 채널의 미니앱}", style=btn_channel

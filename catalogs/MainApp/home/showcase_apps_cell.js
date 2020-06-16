@@ -1,7 +1,7 @@
 function show_menu() {
     var source = ($env["APPEARANCE"] == "header") ? "showcase.apps.header" : "showcase.apps"
 
-    controller.catalog().submit("showcase", "auxiliary", "S_APPS.MENU", {
+    controller.catalog().submit("showcase", "auxiliary", "S_APPS_MENU", {
         "package":$data["id"],
         "title":$data["title"],
         "channel":$data["channel"] || "",
@@ -9,5 +9,5 @@ function show_menu() {
         "pinning":$data["pinning"],
         "source":source
     })
-    controller.action("popup", { "display-unit":"S_APPS.MENU" })
+    controller.action("popup", { "display-unit":"S_APPS_MENU" })
 }

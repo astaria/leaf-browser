@@ -6,6 +6,6 @@
             params-when-selected@channel="sortkey=running,sortorder=descending", \
             reloads-cell-when-focus=no, style=showcase_apps
 
-=object cell: id=cell.explore, display-unit=S_APPS.EXPLORE, style=cell_explore
+=object cell: id=cell.explore, display-unit=S_APPS_EXPLORE, style=cell_explore
 
 =end header

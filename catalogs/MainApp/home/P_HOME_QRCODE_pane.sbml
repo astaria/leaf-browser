@@ -1,8 +1,8 @@
-=begin pane: script-when-loaded=on_loaded
+=begin pane
 
 =object camera: id=camera, autostart=no, autofocus=yes, continuous-autofocus=yes, focus-closely=yes, \
-            metadata-enabled=yes, metadata-object-types="qrcode,barcode", \
-            script-when-output@metadata=on_scan, script-when-resume=on_resume, \
+            metadata-enabled=yes, metadata-object-types="qrcode,barcode", script-when-output@metadata=on_scan, \
+            script-when-activate=on_activate, script-when-suspend=on_suspend, script-when-resume=on_resume, \
             style=camera_scanner
 
 =object section: section=mask, style=section_mask

@@ -11,7 +11,7 @@ import ~/themes.sbss
         footer-spacing=18dp, footer-height=1eb, keeps-offscreen-cells=yes
 #img_top_cover: width=1pw, height=10dp, position=abs, gravity=top, y=1sbh+52dp
 
-/pane: script-when-loaded=on_loaded, page-background-color=$THEME_COLOR_DARK_BACKGROUND
+/pane: page-background-color=$THEME_COLOR_DARK_BACKGROUND
 
 if $SCREEN_WIDTH > 4.7
     #showcase_apps: column-count=2, cell-size="(1pw-18dp*3)/2, 180dp+9dp", \

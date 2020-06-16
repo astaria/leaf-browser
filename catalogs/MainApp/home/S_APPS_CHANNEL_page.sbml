@@ -7,7 +7,7 @@
 =object showcase: id=showcase.apps, type=packages, channel="${channel}", alternate-name=apps, \
             sortable=yes, sortkey=running, sortorder=descending, \
             selectable=yes, action-when-selected=open, params-when-selected="target=owner", \
-            empty-display-unit="S_APPS.CHANNEL", \
+            empty-display-unit="S_APPS_CHANNEL", \
             style=showcase_apps
 
 =object image: filename="apps_top_cover.png", scale-mode=stretch, hidden=yes, \

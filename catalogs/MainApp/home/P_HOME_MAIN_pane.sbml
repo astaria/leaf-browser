@@ -1,4 +1,4 @@
-=begin pane
+=begin pane: script-when-loaded=on_loaded
 
 =object label: text="@{MiniApp}", style=label_title
 

@@ -1,6 +1,6 @@
-=begin catalog
+=begin catalog: data-binding=leaflet-status, script-when-data-changed=on_change_data
 
-=object panes: name=home, focused-pane=P_HOME_MAIN, -has-header=yes, -has-navibar=yes, style=panes_home
+=object panes: name=home, focused-pane=P_HOME_MAIN, style=panes_home
 
 =object cell: id=leaflet.guide, display-unit=S_LEAFLET_INTRO, hidden=yes, style=cell_leaflet.guide
 

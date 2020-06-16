@@ -1,4 +1,29 @@
 var __camera_started = false
+var __camera_suspended = false
+
+function on_activate() {
+    timeout(0.1, function() {
+        if (!__camera_suspended) {
+            view.object("camera").action("start")
+
+            __camera_started = true
+        }
+    })
+}
+
+function on_suspend() {
+    __camera_suspended = true
+}
+
+function on_resume() {
+    if (!__camera_started) {
+        view.object("camera").action("start")
+
+        __camera_started = true
+    }
+
+    __camera_suspended = false
+}
 
 function on_scan(data) {
     var code = __get_matched_code(data["text"])
@@ -18,18 +43,6 @@ function on_scan(data) {
     }
 
     __save_scanning_history(data["text"], code)
-}
-
-function on_resume() {
-    if (!__camera_started) {
-        view.object("camera").action("start")
-    }
-
-    __camera_started = true
-}
-
-function restart() {
-
 }
 
 function __get_matched_code(text) {

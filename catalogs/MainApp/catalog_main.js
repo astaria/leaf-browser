@@ -33,7 +33,7 @@ function on_receive(params) {
     if (params["action"] === "media-mounted") {
         var path = params["data"].replace("file://", "")
 
-        if (path !== document.value("app.path")) {
+        if (!(document.value("app.path") || "").startsWith(path)) {
             document.value("app.path", "")
         }
 
@@ -50,7 +50,7 @@ function on_receive(params) {
     if (params["action"] === "media-eject") {
         var path = params["data"].replace("file://", "")
 
-        if (path === document.value("app.path")) {
+        if ((document.value("app.path") || "").startsWith(path)) {
             controller.action("app-close")
 
             timeout(1, function() {
@@ -98,6 +98,26 @@ function on_notify(params) {
     
 }
 
+function on_open_app(params) {
+    var url = "https://leafapp.io/api/v1/apps/" + params["app"]
+
+    fetch(url).then(function(response) {
+        if (response.ok) {
+            response.json().then(function(data) {
+                if (data["version"] !== params["version"]) {
+                    controller.action("update", {
+                        "filename":data["app"] + ".jam",
+                        "root-path":"cache",
+                        "dir-path":"apps",
+                        "format":"jam",
+                        "url":data["file"]
+                    })
+                }
+            })
+        }
+    })
+}
+
 function open_app(params) {
     var data = JSON.parse(params["data"] || "{}")
 
@@ -125,7 +145,7 @@ function __watch_and_run_app() {
     var storages = directory("removable-storage") || []
 
     storages.forEach(function(path) {
-        path = __volume_path_for_removable_storage(path)
+        path = path + "/App"
 
         exist("/", path + "/package.bon").then(function() {
             if (!document.value("app.path")) {
@@ -148,7 +168,7 @@ function __watch_and_cleanup_app() {
     var exists_app_path = false
 
     storages.forEach(function(path) {
-        path = __volume_path_for_removable_storage(path)
+        path = path + "/App"
 
         if (path === document.value("app.path")) {
             exists_app_path = true
@@ -162,14 +182,6 @@ function __watch_and_cleanup_app() {
     } else {
         document.value("app.path", "")
     }
-}
-
-function __volume_path_for_removable_storage(path) {
-    if (path.includes("/Android")) {
-        path = path.substring(0, path.indexOf("/Android"))
-    }
-
-    return path
 }
 
 function __update_leaflet_status(event) {
