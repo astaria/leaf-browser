@@ -42,7 +42,6 @@ function share() {
     })
     
     __fetch_app_info().then(function(data) {
-        console.log(JSON.stringify(data))
         __share_app_url(data["url"])
 
         timeout(1, function() {
