@@ -1,5 +1,8 @@
 function do_action() {
-    eval($data["script"] + "('" + $data["text"].replace("'", "\\'") + "')")
+    eval($data["script"] + "(" +
+        "'" + $data["text"].replace("'", "\\'") + "', " + 
+        "'" + $data["country-code"] + "'" + 
+    ")")
 }
 
 function share() {

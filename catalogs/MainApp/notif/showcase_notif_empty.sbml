@@ -3,10 +3,9 @@
 =begin content
 =object image: filename="empty_notif.png", style=image_empty
 
-=begin guide
+=begin message
 @{There is no notification.}
-=end guide
-
+=end message
 =end content
 
 =end empty

@@ -3,5 +3,5 @@ import ~/themes.sbss
 #image_empty: width=200dp, height=200dp
 
 /empty/content: display=block, position=abs, gravity=center, y=-80dp
-/empty/content/guide: margin="20dp 0 40dp 0", \
+/empty/content/message: margin="20dp 0 40dp 0", \
         font-family=@{$SANS_REGULAR}, font-size=1.2, text-color=$THEME_COLOR_TEXT, text-align=center

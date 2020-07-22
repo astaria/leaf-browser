@@ -3,25 +3,26 @@ import ~/themes.sbss
 #blank_background: color=$COLOR_WHITE, width=1pw, height=1ph, position=abs, gravity=center, \
         content-border-radius=20dp
 
-#img_banner: width=1pw, height=1pw*9/16, position=abs, gravity=top, \
+#img_banner: width=1pw, height=1pw*1/2, position=abs, gravity=top, \
         default-color=$COLOR_DARK_WHITE, scale-mode=fill, scales-in-background=no, loading-duration=0.3
 
-#label_title: width=1pw-70p, heigth=24dp, position=abs, gravity=top-left, x=15dp, y=(1pw*9/16)+6dp, \
-        font-family=@{$SANS_BOLD}, font-size=1.3, text-color=$THEME_COLOR_TEXT, \
+#label_title: width=1pw-70p, height=24dp, position=abs, gravity=top-left, x=15dp, y=(1pw*1/2)+6dp, \
+        font-family=@{$SANS_MEDIUM}, font-size=1.3, text-color=$THEME_COLOR_TEXT, \
         line-break-mode=tail-truncation
 
-#label_adcopy: width=1pw-30dp, heigth=20dp, position=abs, gravity=top-left, x=15dp, y=(1pw*9/16)+30dp, \
-        font-family=@{$SANS_MEDIUM}, font-size=1.05, text-color=$THEME_COLOR_TEXT, \
+#label_adcopy: width=1pw-30dp, height=20dp, position=abs, gravity=top-left, x=15dp, y=(1pw*1/2)+34dp, \
+        font-family=@{$SANS_LIGHT}, font-size=1.05, text-color=$THEME_COLOR_TEXT, \
         line-break-mode=tail-truncation
 
-#label_using: width=1pw-120dp, heigth=12dp, position=abs, gravity=left-top, x=15dp, y=(1pw*9/16)+60dp, \
-        font-family=@{$SANS_REGULAR}, font-size=0.95, text-color=$THEME_COLOR_LIGHT_TEXT
+#label_using: width=130dp, height=20dp, position=abs, gravity=left-top, x=15dp, y=(1pw*1/2)+62dp, \
+        font-family=@{$SANS_LIGHT}, font-size=0.95, text-color=$THEME_COLOR_LIGHT_TEXT, \
+        line-break-mode=tail-truncation
 
-#btn_channel: height=36dp, position=abs, position=abs, gravity=right-bottom, x=-6dp, y=-5dp, \
+#btn_channel: height=36dp, position=abs, position=abs, gravity=right-bottom, x=-6dp, y=-1dp, \
         content-padding-right=32dp, label-font-family=@{$SANS_REGULAR}, label-font-size=1.0, \
         label-color=$THEME_COLOR_TEXT, highlight-label-color=$THEME_COLOR_LIGHT_TEXT
-#img_channel: width=26dp, height=26dp, position=abs, gravity=right-bottom, x=-6dp, y=-10dp
-#btn_menu: width=30dp, height=30dp, position=abs, gravity=top-right, y=(1pw*9/16)+4dp
+#img_channel: width=26dp, height=26dp, position=abs, gravity=right-bottom, x=-6dp, y=-6dp
+#btn_menu: width=30dp, height=30dp, position=abs, gravity=top-right, y=(1pw*1/2)+4dp
 
 /cell: skips-drawing=yes
 

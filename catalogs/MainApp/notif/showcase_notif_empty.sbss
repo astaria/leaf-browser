@@ -1,14 +1,14 @@
 import ~/themes.sbss
 
 /empty/content: display=block, position=abs, gravity=center, y=-80dp
-/empty/content/guide: margin="20dp 0 40dp 0", \
+/empty/content/message: margin="20dp 0 40dp 0", \
         font-family=@{$SANS_REGULAR}, font-size=1.2, text-color=$THEME_COLOR_TEXT, text-align=center
 
 if $SCREEN_WIDTH > 4.7
     #image_empty: width=300dp, height=300dp
 
     if $ORIENTATION == "portrait"
-        /empty/content/guide: margin-top=50dp
+        /empty/content/message: margin-top=50dp
     else
         /empty/content: y=0
     end

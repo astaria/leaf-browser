@@ -34,6 +34,7 @@ function on_scan(data) {
         controller.catalog().submit("showcase", "auxiliary", "S_CODE.SCANNED", {
             "type":code["type"],
             "text":data["text"],
+            "country-code":data["country-code"],
             "action-message":code["action-message"],
             "script":code["script"]
         })

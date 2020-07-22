@@ -3,9 +3,9 @@
 =begin content
 =object image: filename="empty_apps.png", style=image_empty
 
-=begin guide
+=begin message
 @{Your MiniApp list is empty.}
-=end guide
+=end message
 
 =object button: script=explore, label="@{Explore MiniApp}", style=btn_explore
 =end content
