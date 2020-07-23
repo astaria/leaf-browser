@@ -42,7 +42,7 @@ function share() {
     })
     
     __fetch_app_info().then(function(data) {
-        __share_app_url(data["url"])
+        __share_app_url(data["file"])
 
         timeout(1, function() {
             controller.action("unfreeze", { "close-popup":"yes" })
