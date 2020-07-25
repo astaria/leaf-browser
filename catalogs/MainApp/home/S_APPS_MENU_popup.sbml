@@ -16,6 +16,9 @@ ${title}
 =(object button: label="@{Pin to the top}", script=pin, style=btn_menu, style=btn_pin)=
 =end button
 =begin button: style=menu.app
+=(object button: label="@{Add to Home Screen}", script=shortcut, style=btn_menu)=
+=end button
+=begin button: style=menu.app
 =(object button: label="@{Share}", script=share, style=btn_menu)=
 =end button
 

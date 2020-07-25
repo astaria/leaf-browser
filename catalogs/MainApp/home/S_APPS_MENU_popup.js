@@ -36,6 +36,13 @@ function channel() {
     })
 }
 
+function shortcut() {
+    controller.action("shortcut", {
+        "app":$data["app"],
+        "action-when-done":"popup-close"
+    })
+}
+
 function share() {
     controller.action("freeze", {
         "message":controller.catalog().string("Processing...")
