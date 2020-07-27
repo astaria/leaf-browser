@@ -7,10 +7,10 @@ import showcase_apps_cell.sbss
         label-font-family=@{$SANS_REGULAR}, label-font-size=0.95, \
         label-color=$THEME_COLOR_TEXT, highlight-label-color=$COLOR_BLACK, \
         line-break-mode=tail-truncation
-#btn_channel.count: height=14dp, content-padding="0 5dp", vertical-align=middle, offset-y=1dp, \
-        label-font-family=$SANS_BOLD, label-font-size=0.7, \
-        label-color=$COLOR_WHITE, highlight-label-color=$COLOR_DARK_WHITE, \
-        content-border-radius=2dp, content-background-color=$THEME_COLOR_GRAY_BACKGROUND
+#btn_channel.count: height=16dp, content-padding="0 5dp", vertical-align=middle, offset-y=1dp, \
+        label-font-family=$SANS_REGULAR, label-font-size=0.7, \
+        label-color=$THEME_COLOR_TEXT, highlight-label-color=$COLOR_BLACK, \
+        content-border-radius=2dp, content-border-width=1dp, content-border-color=$COLOR_LIGHT_GRAY
 
 /cell/default/channel: display=block, position=abs, gravity=bottom, padding-right=20dp, text-align=right
 
