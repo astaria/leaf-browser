@@ -10,12 +10,12 @@ import showcase_apps_cell.sbss
 #btn_channel.count: height=16dp, content-padding="0 5dp", vertical-align=middle, offset-y=1dp, \
         label-font-family=$SANS_REGULAR, label-font-size=0.7, \
         label-color=$THEME_COLOR_TEXT, highlight-label-color=$COLOR_BLACK, \
-        content-border-radius=2dp, content-border-width=1dp, content-border-color=$COLOR_LIGHT_GRAY
+        content-border-radius=2dp, content-border-width=1dp, content-border-color=$THEME_COLOR_LIGHT_LINE
 
 /cell/default/channel: display=block, position=abs, gravity=bottom, padding-right=20dp, text-align=right
 
 if $SCREEN_WIDTH > 4.7
-    #btn_channel: max-width=1pw-(1ph+10dp+20dp)
+    #btn_channel: max-width=1pw-(1ph+10dp+30dp+20dp)
 else
-    #btn_channel: max-width=1pw-(1ph+8dp+20dp)
+    #btn_channel: max-width=1pw-(1ph+8dp+30dp+20dp)
 end
