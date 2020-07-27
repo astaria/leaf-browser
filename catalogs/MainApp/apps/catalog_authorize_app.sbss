@@ -1,0 +1,3 @@
+import ~/themes.sbss
+
+/catalog: page-background-color=$COLOR_BLACK_DEEP_DIM

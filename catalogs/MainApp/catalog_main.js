@@ -1,4 +1,5 @@
-const connect = require("connect")
+const connect = require("connect"),
+      api     = require("api")
 
 var __media_mounted = false
 var __media_bad_removed = false

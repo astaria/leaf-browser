@@ -1,7 +1,7 @@
 import ~/themes.sbss
 
 #img_background: width=1pw, height=1ph, position=abs, gravity=center, scale-mode=stretch
-#section_default: width=1pw, height=1ph, position=abs, gravity=center
+#section_default: width=1pw, height=1ph, position=abs, gravity=top, scroll-enabled=no
 
 #screenshot: width=(1ph-14dp*2)*2/3, height=1ph-14dp*2, position=abs, gravity=left
 #img_screenshot: style=screenshot, width=((1ph-14dp*2)*2/3)-6dp, height=(1ph-14dp*2)-6dp, \
@@ -23,11 +23,11 @@ import ~/themes.sbss
 
 #img_pinning: width=14dp, height=14dp, scale-mode=fit
 
-/cell: skips-drawing=yes
+/cell: skips-drawing=yes, active-color=$COLOR_TRANSPARENT
 /cell/default: display=none
 /cell/default/description: margin="15dp 20dp 20dp 0", \
         font-family=@{$SANS_LIGHT}, font-size=1.0, text-color=$THEME_COLOR_TEXT
-/cell/default/description/title: margin="0 40dp 10dp 0", \
+/cell/default/description/title: margin="0 40dp 6dp 0", \
         font-family=@{$SANS_MEDIUM}, font-size=1.4, text-align=left, \
         line-spacing=-4dp, line-break-mode=word-wrap
 

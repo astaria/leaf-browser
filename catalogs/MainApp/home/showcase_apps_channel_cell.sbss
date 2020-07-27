@@ -1,9 +1,21 @@
 import showcase_apps_cell.sbss
 
-#btn_channel: width=30dp, height=40dp, position=abs, gravity=bottom-right, scale-mode=fit
+#btn_channel.heading: height=18dp, content-padding="0 7dp", margin-right=4dp, vertical-align=middle, \
+        label-font-family=@{$SANS_MEDIUM}, label-font-size=0.8, label-color=$THEME_COLOR_TEXT, \
+        content-border-radius=20dp/2, content-background-color=$THEME_COLOR_MAIN
+#btn_channel: height=40dp, margin-right=4dp, vertical-align=middle, \
+        label-font-family=@{$SANS_REGULAR}, label-font-size=0.95, \
+        label-color=$THEME_COLOR_TEXT, highlight-label-color=$COLOR_BLACK, \
+        line-break-mode=tail-truncation
+#btn_channel.count: height=18dp, content-padding="0 5dp", vertical-align=middle, \
+        label-font-family=$SANS_BOLD, label-font-size=0.8, \
+        label-color=$COLOR_WHITE, highlight-label-color=$COLOR_DARK_WHITE, \
+        content-border-radius=2dp, content-background-color=$THEME_COLOR_GRAY_BACKGROUND
+
+/cell/default/channel: display=block, position=abs, gravity=bottom, padding-right=20dp, text-align=right
 
 if $SCREEN_WIDTH > 4.7
-    #btn_channel: x=-10dp, y=-10dp
+    #btn_channel: max-width=1pw-(1ph+10dp+20dp)
 else
-    #btn_channel: x=-8dp, y=-5dp
+    #btn_channel: max-width=1pw-(1ph+8dp+20dp)
 end

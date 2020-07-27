@@ -45,7 +45,7 @@ function shortcut() {
 
 function share() {
     controller.action("freeze", {
-        "message":controller.catalog().string("Processing...")
+        "message":controller.catalog().string("Preparing...")
     })
     
     __fetch_app_info().then(function(data) {
@@ -60,6 +60,7 @@ function share() {
             "app":$data["app"],
             "filename":"__app_to_share.jam",
             "root-path":"cache",
+            "freezes":"no",
             "script-when-done":"on_export_to_share"
         })    
     })

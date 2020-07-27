@@ -13,13 +13,17 @@ ${first.title} =(object image: filename="icon_pinning.png", style=img_pinning)=
 =end title
 ${first.description}
 =end description
+=begin channel
+=(object button: label="@{CH}", style=btn_channel.heading)=\
+=(object button: script=open_channel, label="${title}", style=btn_channel)=\
+=(object button: script=open_channel, label="${PACKAGE_COUNT}", style=btn_channel.count)=
+=end channel
 =end default
 
 =object image: type=app, subtype=banner, app="${first.app}", reuse-id="banner.${channel}", style=img_banner
 =object widget: app="${first.app}", reuse-id="widget.${channel}", style=widget
 
 =object label: text="${first.title}", reuse-id="title.${channel}", style=label_title
-=object button: script=open_channel, image="btn_channel.png", style=btn_channel
 =object button: script=show_menu, image="btn_menu.png", style=btn_menu
 
 =end cell
