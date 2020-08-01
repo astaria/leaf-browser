@@ -1,8 +1,10 @@
 import ~/themes.sbss
 
-#panes_home: width=1pw, height=1ph, position=abs, gravity=center
+#panes_home: width=1pw, height=1ph, position=abs, gravity=center, autoresizing=flexible-size
 
-#cell_leaflet.guide: width=1pw, max-width=1ph, position=abs, gravity=bottom
+#cell_leaflet.guide: width=1pw, max-width=1ph, position=abs, gravity=bottom, autoresizing=bottom
+
+/catalog: fits-to-page=yes
 
 if $SCREEN_WIDTH > 4.7
     if $ORIENTATION == "portrait"

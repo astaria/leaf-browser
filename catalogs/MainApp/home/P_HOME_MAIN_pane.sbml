@@ -11,7 +11,7 @@
             selectable=yes, action-when-selected=open, params-when-selected="target=owner", \
             reloads-cell-when-focus=no, scrolls-top-when-back=yes, \
             style=showcase_apps
-            
+
 =object image: filename="apps_top_cover.png", scale-mode=stretch, hidden=yes, \
             follows-scroll=yes, owner=showcase.apps, follow-action=show, min-y=1dp, \
             style=img_top_cover

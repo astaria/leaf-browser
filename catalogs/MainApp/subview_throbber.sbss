@@ -1,6 +1,6 @@
 import themes.sbss
 
-#section_content: position=abs, gravity=center, autoresizing=flexible-margins, \
+#section_content: position=abs, gravity=center, \
             content-background-color=$COLOR_BLACK_DEEPEST_DIM, content-border-radius=10dp
 
 #effect: position=abs, gravity=center, y=-20dp
