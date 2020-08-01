@@ -19,9 +19,9 @@ import ~/themes.sbss
         line-break-mode=tail-truncation
 
 #btn_channel: height=36dp, position=abs, position=abs, gravity=right-bottom, x=-6dp, y=-1dp, \
-        content-padding-right=32dp, label-font-family=@{$SANS_REGULAR}, label-font-size=1.0, \
+        content-padding-right=28dp, label-font-family=@{$SANS_REGULAR}, label-font-size=1.0, \
         label-color=$THEME_COLOR_TEXT, highlight-label-color=$THEME_COLOR_LIGHT_TEXT
-#img_channel: width=26dp, height=26dp, position=abs, gravity=right-bottom, x=-6dp, y=-6dp
+#img_channel: width=20dp, height=20dp, position=abs, gravity=right-bottom, x=-8dp, y=-9dp
 #btn_menu: width=30dp, height=30dp, position=abs, gravity=top-right, y=(1pw*1/2)+4dp
 
 /cell: skips-drawing=yes
