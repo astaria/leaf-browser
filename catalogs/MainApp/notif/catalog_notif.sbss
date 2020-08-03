@@ -2,7 +2,7 @@ import ~/themes.sbss
 
 #btn_back: width=44dp, height=44dp, position=abs, gravity=left-top, y=1sbh+2dp
 
-#label_title: height=48dp, position=abs, gravity=left-top, x=44dp+6dp, y=1sbh, \
+#label_title: height=48dp, position=abs, gravity=left-top, x=44dp+6dp, y=1sbh, autoresizing=flexible-size, \
         font-family=@{$SANS_BOLD}, font-size=1.8, text-color=$COLOR_BLACK
 
 #showcase_notif: width=1pw-20dp, height=1ph-(1sbh+48dp), position=abs, gravity=top, y=1sbh+48dp, \

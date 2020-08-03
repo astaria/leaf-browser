@@ -4,7 +4,7 @@ import ~/themes.sbss
 
 #cell_leaflet.guide: width=1pw, max-width=1ph, position=abs, gravity=bottom, autoresizing=bottom
 
-/catalog: fits-to-page=yes
+/catalog: reloads-when-resize=no, fits-to-page=yes
 
 if $SCREEN_WIDTH > 4.7
     if $ORIENTATION == "portrait"

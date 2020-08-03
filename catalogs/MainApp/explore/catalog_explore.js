@@ -5,15 +5,13 @@ function feed_explore(keyword, location, length, sortkey, sortorder, handler) {
     var cached = __cached_data()
 
     if (cached.length > location) {
-        timeout(1.5, function() {
-    	    var last = location + Math.min(cached.length - location, length)
+        var last = location + Math.min(cached.length - location, length)
 
-            if (last > location) {
-                handler(cached.slice(location, last))
-            } else {
-                handler([])
-            }
-        })
+        if (last > location) {
+           handler(cached.slice(location, last))
+        } else {
+           handler([])
+        }
     } else {
         fetch(url + "?" + query, null, true).then(function(response) {
            	if (response.ok) {

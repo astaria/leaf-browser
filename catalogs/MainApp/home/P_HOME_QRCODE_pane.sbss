@@ -1,9 +1,8 @@
 import ~/themes.sbss
 
-#camera_scanner: width=1pw, height=1ph, position=abs, gravity=center, autoresizing=flexible-size
+#camera_scanner: width=1pw, height=1ph
 
-#section_mask: width=1pw, height=1ph, position=abs, gravity=center, autoresizing=flexible-size, \
-        scroll-enabled=no
+#section_mask: width=1pw, height=1ph, position=abs, gravity=center, scroll-enabled=no
 
 #img_scanner: scale-mode=stretch
 #blank_mask.1: color=$THEME_COLOR_CAMERA_MASK

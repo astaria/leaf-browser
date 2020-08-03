@@ -1,5 +1,5 @@
-=begin empty
+=begin empty: script-when-loaded=on_loaded
 
-=object effect: type=lottie, filename="loading.json", style=effect_loading
+=object effect: id=effect.loading, type=lottie, filename="loading.json", hidden=yes, style=effect_loading
 
 =end empty

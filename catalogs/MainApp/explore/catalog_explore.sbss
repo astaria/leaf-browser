@@ -6,14 +6,14 @@ import ~/themes.sbss
         font-family=@{$SANS_BOLD}, font-size=1.8, text-color=$COLOR_BLACK
 
 #showcase_explore: width=1pw, height=1ph-(1sbh+48dp), position=abs, gravity=top, y=1sbh+48dp, \
-        autoresizing=flexible-size, keeps-offscreen-cells=yes
+        keeps-offscreen-cells=yes
 
-/catalog: fits-to-page=yes, page-background-color=$THEME_COLOR_DARK_BACKGROUND
+/catalog: page-background-color=$THEME_COLOR_DARK_BACKGROUND
 
 if $SCREEN_WIDTH > 4.7
-    #showcase_explore: column-count=2, cell-size="(1pw-(20dp+10dp))/2, (1pw-(20dp+10dp))/2+92dp", \
+    #showcase_explore: column-count=2, cell-size="0, (1pw-(20dp+10dp))/2+92dp", \
             cell-spacing=10dp, content-margin="0 10dp", header-spacing=5dp, preload-count=10
 else
-    #showcase_explore: column-count=1, cell-size="1pw-20dp, (1pw-20dp)/2+92dp", \
+    #showcase_explore: column-count=1, cell-size="0, (1pw-20dp)/2+92dp", \
             cell-spacing=10dp, content-margin="0 10dp", header-spacing=5dp, preload-count=5
 end

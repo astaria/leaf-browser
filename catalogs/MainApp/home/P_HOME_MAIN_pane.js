@@ -1,7 +1,3 @@
-function on_loaded() {
-
-}
-
 function open_notif() {
     controller.action("subview", {
         "subview":"V_NOTIF", 

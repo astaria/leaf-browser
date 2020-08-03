@@ -6,7 +6,7 @@ import ~/themes.sbss
         font-family=@{$SANS_BOLD}, font-size=1.8, text-color=$COLOR_BLACK,
 
 #showcase_search: width=1pw, height=1ph-(1sbh+75dp), position=abs, gravity=top, y=1sbh+75dp, \
-        content-background-color=$COLOR_WHITE
+        autoresizing=flexible-size, content-background-color=$COLOR_WHITE
 
 #section_searchbar: width=1pw, height=42dp, position=abs, gravity=top, y=1sbh+54dp
 #blank_searchbar: color=$COLOR_WHITE, width=1pw-42dp, height=1ph, position=abs, gravity=center, \
@@ -16,13 +16,13 @@ import ~/themes.sbss
 #img_search: width=20dp, height=20dp, position=abs, gravity=left, x=30dp
 #btn_clear: width=42dp, height=42dp, position=abs, gravity=right, x=-20dp
 
-/catalog: page-background-color=$THEME_COLOR_DARK_BACKGROUND
+/catalog: reloads-when-resize=no, page-background-color=$THEME_COLOR_DARK_BACKGROUND
 /catalog/searchbar: display=none
 
 if $SCREEN_WIDTH > 4.7
-    #showcase_search: column-count=2, cell-size="(1pw-40dp)/2, 66dp", \
+    #showcase_search: column-count=2, cell-size="0, 66dp", \
             content-margin="0 20dp", header-spacing=30dp
 else
-    #showcase_search: column-count=2, cell-size="(1pw-40dp)/2, 66dp", \
+    #showcase_search: column-count=2, cell-size="0, 66dp", \
             content-margin="0 20dp", header-spacing=30dp
 end

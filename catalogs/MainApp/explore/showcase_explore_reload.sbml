@@ -1,5 +1,5 @@
-=begin footer
+=begin loadmore
 
 =object label: text="@{아래로 잡아당기면 미니앱 목록을 새로 불러옵니다.}", style=label_info
 
-=end footer
+=end loadmore
