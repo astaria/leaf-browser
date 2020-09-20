@@ -7,7 +7,7 @@ ${title}
 =end title
 
 =begin button
-=(object button: label="@{링크 주소 복사하기}", action=copy, media=text, text="${url}", \
+=(object button: label="@{Copy link address}", action=copy, media=text, text="${url}", \
             post-action=popup-close, style=btn_menu)=
 =end button
 

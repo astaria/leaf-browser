@@ -1,6 +1,14 @@
-=begin catalog: script-when-loaded=on_loaded, script-when-receive=on_receive, script-when-link=on_link, \
-                script-when-foreground=on_foreground, script-when-background=on_background, \
-                script-when-notify=on_notify, script-when-open@app=on_open_app
+=begin catalog: script-when-loaded=on_loaded, \
+                script-when-foreground=on_foreground, \
+                script-when-background=on_background, \
+                script-when-register-notifications=on_register_notifications, \
+                script-when-link=on_link, \
+                script-when-notify=on_notify, \
+                script-when-receive=on_receive, \
+                script-when-install@app=on_install_app, \
+                script-when-uninstall@app=on_uninstall_app, \
+                script-when-open@app=on_open_app, \
+                script-when-close@app=on_close_app
 
 =object blank: id=container, style=blank_container
 

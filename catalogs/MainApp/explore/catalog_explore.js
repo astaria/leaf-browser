@@ -2,7 +2,10 @@ function feed_explore(keyword, location, length, sortkey, sortorder, handler) {
     //var url = "https://leafapp.io/api/v1/store"
     var url = "https://jampod-156205.appspot.com/api/v1/store"
     var query = "location=" + location + "&" + "length=" + length
-    var cached = __cached_data()
+    var options = { "includes-session-headers":true }
+    var cached = _cached_data()
+
+    console.log(device("country"))
 
     if (cached.length > location) {
         var last = location + Math.min(cached.length - location, length)
@@ -13,12 +16,12 @@ function feed_explore(keyword, location, length, sortkey, sortorder, handler) {
            handler([])
         }
     } else {
-        fetch(url + "?" + query, null, true).then(function(response) {
+        fetch(url + "?" + query, null, options).then(function(response) {
            	if (response.ok) {
                	response.json().then(function(data) {
               		handler(data)
 
-                   	__cache_data(cached.concat(data))
+                   	_cache_data(cached.concat(data))
                	})
            	} else {
                	handler([])
@@ -43,7 +46,7 @@ function open_app(params) {
     })
 }
 
-function __cached_data() {
+function _cached_data() {
     var data = document.value("data.explore")
     
     if (data) {
@@ -57,7 +60,7 @@ function __cached_data() {
     return []
 }
 
-function __cache_data(data) {
+function _cache_data(data) {
     document.value("data.explore", data)
     document.value("data.explore.at", Date.now())
 }

@@ -5,9 +5,9 @@
 
 =object label: text="${title}", style=label_title
 =object label: text="${ad-copy}", style=label_adcopy
-=object label: type=decimal, text="${use-count}", format="@{#_명 사용 중}", style=label_using
+=object label: type=decimal, text="${use-count}", format="@{#_ in use}", style=label_using
 
-=object button: script=explore_channel, label="@{이 채널의 더 많은 미니앱}", style=btn_channel
+=object button: script=explore_channel, label="@{More MiniApps on this channel}", style=btn_channel
 =object image: filename="btn_channel.png", style=img_channel
 =object button: script=show_menu, image="btn_menu.png", style=btn_menu
 

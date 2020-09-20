@@ -1,88 +1,24 @@
-const connect = require("connect"),
-      api     = require("api")
-
-var __media_mounted = false
-var __media_bad_removed = false
-
-var __in_foreground = false
+const connect  = require("connect"),
+      firebase = require("firebase"),
+      leaflet  = require("leaflet"),
+      api      = require("api")
 
 function on_loaded() {
-    if (!document.value("app.path")) {
-        timeout(0.3, function() {
-            __watch_and_run_app()
-        })
-    } else {
-        __update_leaflet_status("closed")
-    }
+    _update_deferred_apps_status()
 
-    __in_foreground = true
+    leaflet.on_foreground()
 }
 
 function on_foreground() {
-    timeout(0.3, function() {
-        __watch_and_run_app()
-    })
-
-    __in_foreground = true
+    leaflet.on_foreground()
 }
 
 function on_background() {
-    __in_foreground = false
+    leaflet.on_background()
 }
 
-function on_receive(params) {
-    if (params["action"] === "media-mounted") {
-        var path = params["data"].replace("file://", "")
-
-        if (!(document.value("app.path") || "").startsWith(path)) {
-            document.value("app.path", "")
-        }
-
-        if (__in_foreground) {
-            __watch_and_run_app()
-        }
-
-        __media_mounted = true
-        __media_bad_removed = false
-
-        return
-    }
- 
-    if (params["action"] === "media-eject") {
-        var path = params["data"].replace("file://", "")
-
-        if ((document.value("app.path") || "").startsWith(path)) {
-            controller.action("app-close")
-
-            timeout(1, function() {
-                __watch_and_cleanup_app()
-            })
-
-            __update_leaflet_status("bad-removal")
-        }
-
-        return
-    }
-
-    if (params["action"] === "media-unmounted") {
-        var path = params["data"].replace("file://", "")
-
-        timeout(1, function() {
-            if (!__media_bad_removed) {
-                __update_leaflet_status("unmounted")
-            }    
-        })
-
-        __media_mounted = false
-
-        return
-    }
-
-    if (params["action"] === "media-bad-removal") {
-        __media_bad_removed = true
-
-        return
-    }
+function on_register_notifications(params) {
+    _update_device_token(params["device-token"])
 }
 
 function on_link(params) {
@@ -96,7 +32,53 @@ function on_connect(params) {
 }
 
 function on_notify(params) {
-    
+    // TBD
+}
+
+function on_receive(params) {
+    if (params["action"] === "media-mounted") {
+        leaflet.on_media_mounted(params["data"].replace("file://", ""))
+
+        return
+    }
+
+    if (params["action"] === "media-eject") {
+        leaflet.on_media_eject(params["data"].replace("file://", ""))
+
+        return
+    }
+
+    if (params["action"] === "media-unmounted") {
+        leaflet.on_media_unmounted(params["data"].replace("file://", ""))
+
+        return
+    }
+
+    if (params["action"] === "media-bad-removal") {
+        leaflet.on_media_bad_removal(params["data"].replace("file://", ""))
+
+        return
+    }
+}
+
+function on_install_app(params) {
+    firebase.activate_app(params).then(function(response) {
+        controller.catalog().remove("collection", "firebase.apps", params["app"])
+    }, function(error) {
+        controller.catalog().submit("collection", "firebase.apps", params["app"], Object.assign(params, {
+            "status":"activated"
+        }))
+    })
+}
+
+function on_uninstall_app(params) {
+    firebase.deactivate_app(params).then(function(response) {
+        controller.catalog().remove("collection", "firebase.apps", params["app"])
+    }, function(error) {
+        controller.catalog().submit("collection", "firebase.apps", params["app"], Object.assign(params, {
+            "status":"deactivated"
+        }))
+    })
 }
 
 function on_open_app(params) {
@@ -117,74 +99,41 @@ function on_open_app(params) {
             })
         }
     })
+
+    leaflet.on_open_app(params)
 }
 
-function open_app(params) {
-    var data = JSON.parse(params["data"] || "{}")
-
-    if (data["action"]) {
-        controller.action(data["action"], Object.assign(data, {
-            "app":params["app"],
-            "routes-to-app":"yes"
-        }))
-    } else {
-        connect.invoke("app", params)
-    }
+function on_close_app(params) {
+    leaflet.on_close_app(params)
 }
 
 function open_app_again() {
-    document.value("app.path", "")
-
-    if (__in_foreground) {
-        __watch_and_run_app()
-    }
-
-    console.log("run_app_again!!!")
+    leaflet.open_app_again()
 }
 
-function __watch_and_run_app() {
-    var storages = directory("removable-storage") || []
+function _update_deferred_apps_status() {
+    var count = controller.catalog().count("collection", "firebase.apps")
+    var apps = controller.catalog().values("collection", "firebase.apps", null, null, [ 0, count ])
 
-    storages.forEach(function(path) {
-        path = path + "/App"
-
-        exist("/", path + "/package.bon").then(function() {
-            if (!document.value("app.path")) {
-                controller.action("open", {
-                    "root-path":"/",
-                    "filename":path,
-                    "format":"jam"
-                })
-            
-                __update_leaflet_status("opened")
-
-                document.value("app.path", path)
-            }
-        })
-    })
-}
-
-function __watch_and_cleanup_app() {
-    var storages = directory("removable-storage") || []
-    var exists_app_path = false
-
-    storages.forEach(function(path) {
-        path = path + "/App"
-
-        if (path === document.value("app.path")) {
-            exists_app_path = true
+    apps.forEach(function(app) {
+        if (app["status"] === "activated") {
+            firebase.activate_app(app).then(function(response) {
+                controller.catalog().remove("collection", "firebase.apps", app["app"])
+            })
+        } else {
+            firebase.deactivate_app(app).then(function(response) {
+                controller.catalog().remove("collection", "firebase.apps", app["app"])
+            })
         }
     })
-
-    if (exists_app_path && !__media_mounted) {
-        timeout(1, function() {
-            __watch_and_cleanup_app()
-        })
-    } else {
-        document.value("app.path", "")
-    }
 }
 
-function __update_leaflet_status(event) {
-    controller.update("leaflet-status", { "event":event })
+function _update_device_token(device_token) {
+    var last_device_token = storage.value("device.token")
+
+    if (device_token !== last_device_token) {
+        firebase.update_device_token(device_token).then(function(response) {
+            storage.value("device.token", device_token)
+        })
+    }
 }

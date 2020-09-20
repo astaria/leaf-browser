@@ -7,7 +7,8 @@ function show_menu() {
         "channel":$data["channel"] || "",
         "app":$data["app"] || "",
         "pinning":$data["pinning"],
-        "source":source
+        "source":source,
+        "track-code":$data["app"] || $data["channel"] || ""
     })
     controller.action("popup", { "display-unit":"S_APPS_MENU" })
 }

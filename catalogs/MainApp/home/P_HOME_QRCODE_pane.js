@@ -1,32 +1,32 @@
-var __camera_started = false
-var __camera_suspended = false
+var _camera_started = false
+var _camera_suspended = false
 
 function on_activate() {
     timeout(0.1, function() {
-        if (!__camera_suspended) {
+        if (!_camera_suspended) {
             view.object("camera").action("start")
 
-            __camera_started = true
+            _camera_started = true
         }
     })
 }
 
 function on_suspend() {
-    __camera_suspended = true
+    _camera_suspended = true
 }
 
 function on_resume() {
-    if (!__camera_started) {
+    if (!_camera_started) {
         view.object("camera").action("start")
 
-        __camera_started = true
+        _camera_started = true
     }
 
-    __camera_suspended = false
+    _camera_suspended = false
 }
 
 function on_scan(data) {
-    var code = __get_matched_code(data["text"])
+    var code = _get_matched_code(data["text"])
 
     console.log("code: " + JSON.stringify(code))
 
@@ -36,17 +36,18 @@ function on_scan(data) {
             "text":data["text"],
             "country-code":data["country-code"],
             "action-message":code["action-message"],
-            "script":code["script"]
+            "script":code["script"],
+            "track-code":code["type"]
         })
         controller.action("popup", { "display-unit":"S_CODE.SCANNED" })        
     } else {
         eval(code["script"] + "('" + data["text"].replace("'", "\\'") + "')")
     }
 
-    __save_scanning_history(data["text"], code)
+    _save_scanning_history(data["text"], code)
 }
 
-function __get_matched_code(text) {
+function _get_matched_code(text) {
     var count = controller.catalog().count("showcase", "codes")
     var values = controller.catalog().values("showcase", "codes", null, null, [0, count])
 
@@ -57,7 +58,7 @@ function __get_matched_code(text) {
     }
 }
 
-function __save_scanning_history(text, code) {
+function _save_scanning_history(text, code) {
     var id = encode("hex", hash("md5", text))
 
     controller.catalog().remove("collection", "scanning.history", id)

@@ -15,6 +15,6 @@
 =end buttons
 
 =object timer: id=timer, time="${timeout}", autostart=no, script-when-expired=on_timeout, style=timer
-=object label: type=time, owner=timer, format="@{s초 남음}", style=label_timeout
+=object label: type=time, owner=timer, format="@{s seconds remaining}", style=label_timeout
 
 =end cell
