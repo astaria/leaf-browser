@@ -121,7 +121,7 @@ var module = (function() {
         },
 
         on_close_app: function(params) {
-            if (document.value("leaflet.storage-dir")) {
+            if (document.value("leaflet.app-running")) {
                 if (!document.value("leaflet.app-force-closed")) {
                     _update_leaflet_status("closed");
                 }
